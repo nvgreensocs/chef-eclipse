@@ -41,7 +41,7 @@ bash "Installing Eclipse..." do
                ln -s $prefix/eclipse/eclipse /usr/bin/eclipse
            fi
         else
-           echo "export PATH=\\\$PATH:/$prefix/eclipse/" > bash.profile.d/eclipse.profile
+           echo "export PATH=\\\$PATH:/$prefix/eclipse/" > "#{node[:prefix]}/bash.profile.d/eclipse.profile"
         fi
     else
         echo "Eclipse already installed."
